@@ -1,11 +1,15 @@
-{ nixpkgs ? import <nixpkgs> { }
-, compiler ? "default"
+{ mkDerivation, aeson, base, hspec, network-uri, QuickCheck, stdenv
+, test-invariant, text
 }:
-let
-  inherit (nixpkgs) pkgs;
-
-  haskellPackages = if compiler == "default"
-                       then pkgs.haskellPackages
-                       else pkgs.haskell.packages.${compiler};
-in
-  haskellPackages.callPackage ./network-uri-json.nix { }
+mkDerivation {
+  pname = "network-uri-json";
+  version = "0.1.0.0";
+  src = ./.;
+  libraryHaskellDepends = [ aeson base network-uri text ];
+  testHaskellDepends = [
+    aeson base hspec network-uri QuickCheck test-invariant text
+  ];
+  homepage = "https://github.com/alunduil/network-uri-json";
+  description = "FromJSON and ToJSON Instances for Network.URI";
+  license = stdenv.lib.licenses.mit;
+}
