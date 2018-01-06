@@ -10,12 +10,12 @@ module Network.URI.JSONSpec (main, spec) where
 
 import Data.Aeson (decode, encode)
 import Data.Maybe (fromJust)
+import Network.URI.Arbitrary ()
 import Network.URI (URI)
 import Test.Hspec (describe, hspec, Spec)
 import Test.Hspec.QuickCheck (prop)
 import Test.Invariant ((<=>))
 
-import External.Network.URI.Arbitrary ()
 import Network.URI.JSON ()
 
 main :: IO ()
