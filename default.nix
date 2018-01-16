@@ -3,7 +3,7 @@
 }:
 mkDerivation {
   pname = "network-uri-json";
-  version = "0.1.2.0";
+  version = "0.1.2.1";
   src = ./.;
   libraryHaskellDepends = [ aeson base network-uri text ];
   testHaskellDepends = [
