@@ -1,5 +1,9 @@
 # Revision history for network-uri-json
 
+## 0.1.2.1  -- 2018-01-16
+
+* Bump dependency on network-arbitrary
+
 ## 0.1.2.0  -- 2018-01-06
 
 * Externalize network-arbitrary dependency
