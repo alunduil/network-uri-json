@@ -1,14 +1,13 @@
 { mkDerivation, aeson, base, hspec, network-arbitrary, network-uri
-, QuickCheck, stdenv, test-invariant, text
+, stdenv, test-invariant, text
 }:
 mkDerivation {
   pname = "network-uri-json";
   version = "0.1.2.1";
   src = ./.;
-  libraryHaskellDepends = [ aeson base network-uri text ];
+  libraryHaskellDepends = [ aeson network-uri text ];
   testHaskellDepends = [
-    aeson base hspec network-arbitrary network-uri QuickCheck
-    test-invariant text
+    aeson base hspec network-arbitrary network-uri test-invariant text
   ];
   homepage = "https://github.com/alunduil/network-uri-json";
   description = "FromJSON and ToJSON Instances for Network.URI";

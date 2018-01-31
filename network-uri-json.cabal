@@ -77,7 +77,6 @@ test-suite network-uri-json-tests
     , hspec             == 2.4.*
     , network-arbitrary == 0.3.*
     , network-uri       == 2.6.*
-    , QuickCheck        >= 2.9 && < 2.11
     , test-invariant    == 0.4.*
     , text              == 1.2.*
 
