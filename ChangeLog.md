@@ -1,5 +1,9 @@
 # Revision history for network-uri-json
 
+## 0.3.0.0  -- 2018-12-28
+
+* Update base.
+
 ## 0.2.0.0  -- 2018-12-28
 
 * Update travis configuration.
