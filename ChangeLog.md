@@ -1,5 +1,10 @@
 # Revision history for network-uri-json
 
+## 0.3.1.0  -- 2019-02-01
+
+* Remove GHC 8.2.1 from testing.
+* Update hspec and hspec-discover.
+
 ## 0.3.0.0  -- 2018-12-28
 
 * Update base.
