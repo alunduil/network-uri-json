@@ -1,5 +1,5 @@
 name:                network-uri-json
-version:             0.3.0.0
+version:             0.3.1.0
 synopsis:            FromJSON and ToJSON Instances for Network.URI
 
 description:
