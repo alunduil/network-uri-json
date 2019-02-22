@@ -1,5 +1,11 @@
 # Revision history for network-uri-json
 
+## 0.3.1.1  -- 2019-02-21
+
+* Update cabal.config for cloudbuild.
+* Integrate cloudbuild fixes from network-arbitrary.
+* Use new-sidst rather than sdist.
+
 ## 0.3.1.0  -- 2019-02-01
 
 * Remove GHC 8.2.1 from testing.
