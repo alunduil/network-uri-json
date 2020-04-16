@@ -4,8 +4,8 @@
 }:
 mkDerivation {
   pname = "network-arbitrary";
-  version = "0.4.0.1";
-  sha256 = "697e918907f3946edadd30246c041fe4c5d77f24d47eb5d165565091df303498";
+  version = "0.6.0.0";
+  sha256 = "01d60abb580b3eda290678d88a253ed4ad80d57cfcac4e27e46e59724f1e497a";
   libraryHaskellDepends = [
     base bytestring http-media http-types network-uri QuickCheck
   ];
