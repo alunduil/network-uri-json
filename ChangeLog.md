@@ -1,5 +1,14 @@
 # Revision history for network-uri-json
 
+## 0.4.0.0
+
+* Update project structure.
+* Fixing cabal outdated
+* Exclude GHC 7.8.1
+* Revert tested-with. Regenerate travis.yaml
+* Update network-arbitraty version. Update tested-with
+* Make compatible with GHC 8.8
+
 ## 0.3.1.1  -- 2019-02-21
 
 * Update cabal.config for cloudbuild.

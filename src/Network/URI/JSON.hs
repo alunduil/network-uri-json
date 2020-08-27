@@ -12,12 +12,22 @@ URI Instances for FromJSON and ToJSON
 -}
 module Network.URI.JSON where
 
-import Data.Aeson (FromJSON (parseJSON), ToJSON (toJSON), withText)
-import Data.Text (unpack)
-import Network.URI (parseURIReference, URI, uriToString)
+import           Data.Aeson                     ( FromJSON(parseJSON)
+                                                , ToJSON(toJSON)
+                                                , withText
+                                                )
+import           Data.Text                      ( unpack )
+import           Network.URI                    ( parseURIReference
+                                                , URI
+                                                , uriToString
+                                                )
 
 instance FromJSON URI where
-  parseJSON = withText "URI" $ maybe (fail "invalid URI") return . parseURIReference . unpack
+  parseJSON =
+    withText "URI"
+      $ maybe (fail "invalid URI") return
+      . parseURIReference
+      . unpack
 
 instance ToJSON URI where
   toJSON u = toJSON $ uriToString id u ""
