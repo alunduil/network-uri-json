@@ -50,7 +50,7 @@ library
       aeson >=0.8 && <2.3
     , base >=4.6 && <4.23
     , network-uri >= 2.6 && < 2.8
-    , text == 1.2.*
+    , text >=1.2 && <3
 
   exposed-modules:
       Network.URI.JSON
@@ -85,7 +85,7 @@ test-suite network-uri-json-tests
     , network-arbitrary >=0.3 && <1.1
     , network-uri >= 2.6 && < 2.8
     , test-invariant == 0.4.*
-    , text == 1.2.*
+    , text >=1.2 && <3
 
   other-modules:
       Network.URI.JSON
