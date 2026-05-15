@@ -31,7 +31,6 @@
 
 ## Pull requests
 
-- Branch from `develop` today; default flips to `main` under #70.
 - Conventional commits, imperative subject ≤50 chars.
 - PVP bumps (<https://pvp.haskell.org>) — working mapping until #80
   formalises it:
@@ -51,14 +50,13 @@
 - Public API is `stability: stable`. Removing or renaming exports is
   a major bump and needs explicit direction; additive changes are
   tracked in #62.
-- `default.nix`, `shell.nix`, `network-uri-json.nix`, `nix/`, `.envrc`,
-  and the cabal `source-repository`'s `branch: develop` field are all
-  queued for removal or update. Don't update in passing; cite the
-  relevant issue under #89.
+- `default.nix`, `shell.nix`, `network-uri-json.nix`, `nix/`, and
+  `.envrc` are queued for removal or update. Don't update in passing;
+  cite the relevant issue under #89.
 
 ## Modernization status
 
 Mid-modernization toward the `network-arbitrary` template. Missing
-`.github/workflows`, `.devcontainer`, `cabal-version: 3.0`, and `main`
-as the default branch — all tracked under #89. Read the tracker
-before treating a gap as an oversight.
+`.github/workflows`, `.devcontainer`, and `cabal-version: 3.0` — all
+tracked under #89. Read the tracker before treating a gap as an
+oversight.
