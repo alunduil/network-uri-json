@@ -47,10 +47,10 @@ library
   default-language:    Haskell2010
 
   build-depends:
-      aeson >= 0.8 && < 1.5
+      aeson >=0.8 && <2.3
     , base >=4.6 && <4.23
     , network-uri >= 2.6 && < 2.8
-    , text == 1.2.*
+    , text >=1.2 && <3
 
   exposed-modules:
       Network.URI.JSON
@@ -79,13 +79,13 @@ test-suite network-uri-json-tests
   default-language: Haskell2010
 
   build-depends:
-      aeson >= 0.8 && < 1.5
+      aeson >=0.8 && <2.3
     , base >=4.6 && <4.23
-    , hspec >= 2.4 && < 2.8
+    , hspec >=2.4 && <2.12
     , network-arbitrary >=0.3 && <1.1
     , network-uri >= 2.6 && < 2.8
     , test-invariant == 0.4.*
-    , text == 1.2.*
+    , text >=1.2 && <3
 
   other-modules:
       Network.URI.JSON
@@ -101,4 +101,4 @@ test-suite network-uri-json-tests
 source-repository head
   type:     git
   location: https://github.com/alunduil/network-uri-json
-  branch:   develop
+  branch:   main
