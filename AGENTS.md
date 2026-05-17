@@ -31,7 +31,6 @@
 
 ## Pull requests
 
-- Branch from `main`.
 - Conventional commits, imperative subject ≤50 chars.
 - PVP bumps (<https://pvp.haskell.org>) — working mapping until #80
   formalises it:

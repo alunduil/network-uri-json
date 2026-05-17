@@ -101,4 +101,4 @@ test-suite network-uri-json-tests
 source-repository head
   type:     git
   location: https://github.com/alunduil/network-uri-json
-  branch:   develop
+  branch:   main
