@@ -51,12 +51,13 @@
   a major bump and needs explicit direction; additive changes are
   tracked in #62.
 - `default.nix`, `shell.nix`, `network-uri-json.nix`, `nix/`, and
-  `.envrc` are queued for removal or update. Don't update in passing;
-  cite the relevant issue under #89.
+  `.envrc` are queued for removal — the devcontainer (#54) supersedes
+  them. Don't update in passing.
 
 ## Modernization status
 
-Mid-modernization toward the `network-arbitrary` template. Missing
-`.github/workflows`, `.devcontainer`, and `cabal-version: 3.0` — all
-tracked under #89. Read the tracker before treating a gap as an
+Mid-modernization toward the `network-arbitrary` template. Outstanding
+gaps (`.github/workflows`, `.devcontainer`, `cabal-version: 3.0`) are
+tracked across the modernization milestones (0.4.0.1, 0.4.0.2,
+0.4.0.3). Check the relevant milestone before treating a gap as an
 oversight.
