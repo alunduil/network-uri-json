@@ -1,5 +1,8 @@
 # AGENTS.md
 
+aeson `FromJSON`/`ToJSON` instances for `Network.URI.URI`, with
+orphans confined to `Network.URI.JSON`.
+
 ## Setup
 
 - `cabal build`
