@@ -12,35 +12,18 @@ jobs:
   release-please:
     runs-on: ubuntu-latest
     steps:
-      - uses: googleapis/release-please-action@v4
-        id: release
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          target-branch: main
-          config-file: release-please-config.json
-          manifest-file: .release-please-manifest.json
+          node-version: '20'
 
-      - name: Checkout release PR branch
-        if: steps.release.outputs.pr
+      - name: Install release-please
+        run: npm install --no-save release-please@17.6.0 @octokit/rest@21.0.2
+
+      - name: Run release-please with PVP strategy
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          PR_NUMBER: ${{ fromJson(steps.release.outputs.pr).number }}
-        run: |
-          gh repo set-default "$GITHUB_REPOSITORY"
-          gh pr checkout "$PR_NUMBER"
-
-      - name: Map SemVer to PVP
-        if: steps.release.outputs.pr
-        run: ./.github/scripts/pvp-postprocess.sh
-
-      - name: Commit and push PVP rewrite
-        if: steps.release.outputs.pr
-        run: |
-          if git diff --quiet; then
-            echo "no PVP rewrite needed"
-            exit 0
-          fi
-          git -c user.name='github-actions[bot]' \
-              -c user.email='41898282+github-actions[bot]@users.noreply.github.com' \
-              commit -am 'chore(release): map SemVer to PVP'
-          git push
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          RELEASE_PLEASE_TARGET_BRANCH: ${{ github.ref_name }}
+        run: node .github/scripts/release-please-pvp.mjs

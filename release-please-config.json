@@ -2,6 +2,7 @@
   "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json",
   "bootstrap-sha": "fc115dbeea42fef38319b70c29c3539b41b875ba",
   "release-type": "simple",
+  "versioning": "pvp",
   "changelog-path": "ChangeLog.md",
   "include-v-in-tag": true,
   "packages": {
