@@ -34,7 +34,7 @@ orphans confined to `Network.URI.JSON`.
 
 ## Pull requests
 
-- Branch from `develop` today; default flips to `main` under #70.
+- Branch from `main`.
 - Conventional commits, imperative subject ≤50 chars.
 - PVP bumps (<https://pvp.haskell.org>) — working mapping until #80
   formalises it:
