@@ -2,6 +2,19 @@
 
 [![CI](https://github.com/alunduil/network-uri-json/actions/workflows/ci.yml/badge.svg)](https://github.com/alunduil/network-uri-json/actions/workflows/ci.yml)
 
+> **Deprecated — use [aeson] instead.** Since aeson 2.2.0.0 (2023),
+> aeson ships `FromJSON`/`ToJSON` (and `FromJSONKey`/`ToJSONKey`)
+> instances for [`Network.URI.URI`][network-uri] directly. This
+> package is redundant, and its orphan instances *conflict* with
+> aeson's on aeson `>= 2.2` — the two cannot be imported together.
+> Drop the `network-uri-json` dependency and use aeson's built-in
+> instances.
+>
+> One behavioural difference if you relied on it: this package decoded
+> with `parseURIReference` (accepts relative references such as
+> `/path`), whereas aeson decodes with `parseURI` (absolute URIs
+> only). The encoding (`uriToString`) is identical.
+
 [FromJSON] and [ToJSON] Instances for [Network.URI][network-uri]
 
 # Getting Started
